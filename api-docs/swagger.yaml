@@ -1,0 +1,74 @@
+openapi: 3.0.0
+info:
+  title: Movie API
+  description: APIs to manage movies
+  version: 1.0.0
+paths:
+  /api/v1/movies:
+    get:
+      summary: Get all movies
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create a new movie
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MovieDetails'
+      responses:
+        '200':
+          description: OK
+  /api/v1/movies/{movieId}:
+    get:
+      summary: Get a specific movie by ID
+      parameters:
+        - name: movieId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+    patch:
+      summary: Update a movie by ID
+      parameters:
+        - name: movieId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MovieDetails'
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: Delete a movie by ID
+      parameters:
+        - name: movieId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    MovieDetails:
+      type: object
+      properties:
+        title:
+          type: string
+        director:
+          type: string
+        year:
+          type: integer
