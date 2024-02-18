@@ -41,29 +41,6 @@ Test the output in the REST Client Postman.​
 
 Document the REST API using Swagger.
 
-# Instructions
-
- 1.Download and unzip the boilerplate code.
- 
- 2.Run the command npm install to install the dependencies.
- 
- 3.Open the boilerplate code in VSCode to develop the assignment solution.
- 
- 4.Write the logic in **.js** file present in **src** folder
-
- 5.Run the command npm i json-server to install JSON Server
-
- 5.Run the `json-server -w data/movies.json` command
- 
- 6.Run the test scripts available under src/test by giving the npm run test command in the terminal to test locally.
- 
- 7.Refactor the solution to ensure all test cases are passing.
-
- 8.Test all REST end points on **POSTMAN**
- 
- 9.Zip the solution code with the name same as the assignment name.
- 
- 10.Upload the zipped solution for submission.
 
 
  
